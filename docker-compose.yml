@@ -1,0 +1,26 @@
+version: '3'
+services:
+  heimdall:
+    image: heimdall:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/go/src/github.com/drmjo/heimdall
+      - ./definitions:/go/definitions
+    ports:
+      - 8844:80
+    networks:
+      - main
+
+  dummy_service:
+    image: heimdall/dummy_service:latest
+    build:
+      context: ./dummy_service
+      dockerfile: nginx.Dockerfile
+    networks:
+      - main
+
+networks:
+  main:
+    driver: bridge

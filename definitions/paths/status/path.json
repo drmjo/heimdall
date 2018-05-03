@@ -1,0 +1,13 @@
+{
+  "get": {
+    "description": "Say wassup",
+    "responses": {
+      "200": {
+        "$ref": "paths/status/responses/200.json"
+      }
+    }
+  },
+  "servers": [
+    {"url": "http://dummy_service"}
+  ]
+}

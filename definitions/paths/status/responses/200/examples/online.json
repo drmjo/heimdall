@@ -1,0 +1,6 @@
+{
+  "description": "Healthy response from the status",
+  "value": {
+    "status": "online"
+  }
+}

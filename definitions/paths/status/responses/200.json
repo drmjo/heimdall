@@ -1,0 +1,15 @@
+{
+  "description": "Success",
+  "content": {
+    "application/json": {
+      "schema": {
+        "$ref": "paths/status/responses/200/schema.json"
+      },
+      "examples": {
+        "online": {
+          "$ref": "paths/status/responses/200/examples/online.json"
+        }
+      }
+    }
+  }
+}
